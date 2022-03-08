@@ -1,2 +1,2 @@
 # interfacial_potential
-![Screenshot](sample2.jpeg)
+![Screenshot](sample2.jpg)
