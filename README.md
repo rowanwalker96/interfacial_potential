@@ -1,3 +1,3 @@
 # interfacial_potential
 ![Screenshot](sample.png)
-<img src="sample.png" width="100" height="100">
+<img src="sample.png" width="360" height="240">
