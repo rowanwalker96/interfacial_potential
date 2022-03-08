@@ -1,0 +1,46 @@
+define                  = -DPOSRES -DPOSRES_FC_BB=400.0 -DPOSRES_FC_SC=40.0 -DDIHRES -DDIHRES_FC=4.0
+integrator              = md
+dt                      = 0.001
+nsteps                  = 500000 ; 500ps
+nstxout                 = 100
+nstvout                 = 5000
+nstfout                 = 5000
+nstcalcenergy           = 100
+nstenergy               = 1000
+nstlog                  = 1000
+;
+cutoff-scheme           = Verlet
+nstlist                 = 1
+rlist                   = 1.2
+coulombtype             = pme
+rcoulomb                = 1.2
+vdwtype                 = Cut-off
+vdw-modifier            = Force-switch
+rvdw_switch             = 1.0
+rvdw                    = 1.2
+;
+tcoupl                  = V-rescale
+tc_grps                 = SURF SOL WALL
+tau_t                   = 0.1 0.1 0.1 
+ref_t                   = 300 300 0
+;
+constraints             = h-bonds
+constraint_algorithm    = LINCS
+;
+nstcomm                 = 100
+comm_mode               = linear
+comm_grps               = SURF SOL WALL
+;
+gen-vel                 = yes
+gen-temp                = 300
+gen-seed                = -1
+;
+refcoord_scaling        = com
+periodic-molecules      = yes
+
+freeze-grps             = WALL
+freezedim               = Y Y Y
+ewald-geometry          = 3dc
+ewald_rtol              = 1e-6
+fourierspacing          = 0.1
+pme-order               = 6
