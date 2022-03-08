@@ -7,7 +7,9 @@ This repository provides example input files to perform molecular dynamics (MD) 
 
 ## Dependencies
 The dependencies needed to run the code contained in the Jupyter notebooks can most easily be installed with conda:  
-`conda create -n my_env -c conda-forge mdanalysis=1.1 pytim openmm nglview notebook dask`
+`conda create -n my_env -c conda-forge mdanalysis=1.1 pytim openmm nglview notebook dask` 
+
+The openmm package is only needed to analyse simulations involving water described by the AMOEBA14 water model. The dask package is sometimes used to perform analysis of simulation trajectories in parallel.  
 
 If nglview does not not display run these commands from a terminal: 
 
