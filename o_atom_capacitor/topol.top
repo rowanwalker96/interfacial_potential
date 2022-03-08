@@ -1,0 +1,15 @@
+; Include force field
+#include "charmm27.ff/forcefield.itp"
+
+;Include water topology
+#include "charmm27.ff/spc.itp"
+#include "wall.itp"
+
+[ system ]
+; Name
+SYSTEM
+
+[ molecules ]
+; Compound        #mols
+SOL             12448   
+WALL                1                          

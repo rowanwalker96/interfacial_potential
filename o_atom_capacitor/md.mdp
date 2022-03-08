@@ -1,0 +1,59 @@
+integrator               = md
+dt                       = 0.002
+comm_grps                = SOL WALL
+nstcomm                  = 100  ;2 ps
+nsteps                   = 2500000 ;5ns
+nstxout                  = 100  ;2 ps
+nstvout                  = 0
+nstfout                  = 100
+nstlog                   = 50000
+nstenergy                = 50000
+energygrps               = SOL WALL
+nstlist                  = 10
+ns_type                  = grid
+pbc                      = xy
+;====================================
+;	   non-bonded
+;====================================
+cutoff-scheme            = verlet
+verlet-buffer-tolerance  = -1
+rlist                    = 1.2
+coulombtype              = PME
+rcoulomb                 = 1.2
+pme_order                = 6          
+ewald-geometry           = 3dc
+optimize_fft		 = yes
+vdwtype			 = cut-off 
+rvdw                     = 1.2
+DispCorr		 = no
+ewald_rtol              = 1e-6
+;====================================
+;	    T-coupling:
+;====================================
+tcoupl                   = nose-hoover
+;tcoupl                   = v-rescale
+tc-grps                  = SOL WALL
+tau_t                    = 1.0 1.0
+ref_t                    = 300 0
+;====================================
+;	 initial velocities
+;====================================
+continuation                 = yes
+;====================================
+;	    constraints
+;====================================
+constraint_algorithm     = lincs
+constraints              = h-bonds
+lincs_order              = 4
+lincs_iter               = 1
+;
+;===================================
+;             other
+;===================================
+nwall               = 2
+wall-atomtype       = OW OW
+wall-type           = 9-3
+wall-density        = 33.3 9.5
+wall-ewald-zfac     = 2
+freezegrps          = WALL
+freezedim           = Y Y Y
