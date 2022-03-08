@@ -1,2 +1,2 @@
 # interfacial_potential
-![Screenshot](screenshot.png)
+![Screenshot](silicascreenshot.png)
