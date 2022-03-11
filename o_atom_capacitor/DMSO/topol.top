@@ -1,0 +1,13 @@
+; Include force field
+#include "oplsaa.ff/forcefield.itp"
+#include "DMSO_OPLSAA.itp"
+#include "wall.itp"
+
+[ system ]
+; Name
+SYSTEM
+
+[ molecules ]
+; Compound        #mols
+DMSO            10014
+WALL                1
