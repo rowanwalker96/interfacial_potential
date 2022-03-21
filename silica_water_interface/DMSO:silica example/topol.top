@@ -1,0 +1,13 @@
+; Include force field
+#include "toppar/combined.itp"
+#include "toppar/SURF.itp"
+#include "toppar/DMSO_OPLSAAmod.itp"
+
+[ system ]
+; Name
+SYSTEM
+
+[ molecules ]
+; Compound        #mols
+SURF                1
+DMSO             4000
