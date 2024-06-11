@@ -1,6 +1,6 @@
 # The role of surface chemistry in the orientational behaviour of water at an interface 
 
-This repository provides example input files to perform molecular dynamics (MD) simulation based calculations of the interfacial potential using surface models representing various chemistries as well as different solvents. Jupyter notebooks are also provided in each subdirectory for the visualisation and analysis
+This repository provides example input files to perform molecular dynamics (MD) simulation based calculations of the interfacial potential using surface models representing various chemistries as well as different solvents. An example jupyter notebook is provided for the visualisation and analysis of trajectory data.
 
 
 <img src="cap.png" width="420" height="300">
